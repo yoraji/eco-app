@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Shoes Store</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-dDf5TYkEaBvceX9jA9l2Vv6Nu5xPnG9RtZmGmJZfnp9bU5uUHdTQpJz8v7fzsl0KwDyxqJXoGIPXVb9XoWc6bA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    header.navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #111;
+    }
+
+    .navbar .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .navbar .menu a,
+    .navbar .icons a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .navbar .menu {
+      display: flex;
+      gap: 15px;
+    }
+
+    .navbar .icons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .contact-container {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 20px;
+      background-color: #111;
+      border-radius: 10px;
+    }
+
+    .contact-container h2 {
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-form label {
+      margin-top: 15px;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #222;
+      color: #fff;
+    }
+
+    .contact-form button {
+      margin-top: 20px;
+      padding: 12px;
+      background-color: #b8911c;
+;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .contact-form button:hover {
+      background-color: #c99700;
+;
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">SHOES</div>
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="#">Shop</a>
+      <a href="./about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="icons">
+      <a href="#"><i class="fas fa-search"></i></a>
+      <a href="#"><i class="fas fa-shopping-cart"></i></a>
+    </div>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="contact-container">
+    <h2>Contact Us</h2>
+    <p>If you have any questions or concerns, feel free to reach out!</p>
+    <form class="contact-form" action="#" method="post">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="subject">Subject</label>
+      <input type="text" id="subject" name="subject" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+</body>
+</html>

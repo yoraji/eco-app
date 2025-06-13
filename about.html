@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Shoes Store</title>
+
+  <!-- Font Awesome Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- Styles -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    header.navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #111;
+    }
+
+    .navbar .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .navbar .menu {
+      display: flex;
+      gap: 15px;
+    }
+
+    .navbar .menu a,
+    .navbar .icons a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .navbar .icons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .about-section {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .about-section h1 {
+      color: #b8911c;
+    }
+
+    .testimonial-section {
+      text-align: center;
+      margin: 60px 20px;
+    }
+
+    .testimonial-wrapper {
+      position: relative;
+      max-width: 800px;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    .testimonial-container {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .testimonial {
+      background: #111;
+      border-radius: 12px;
+      min-width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .testimonial-text {
+      max-width: 500px;
+    }
+
+    .testimonial-text .stars {
+      color: #ffc107;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .testimonial-text h3 {
+      margin: 0 0 10px;
+    }
+
+    .testimonial-text .author {
+      font-weight: bold;
+      color: #ccc;
+      margin-top: 10px;
+      display: block;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 30px;
+      background: #fff;
+      color: #111;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      user-select: none;
+    }
+
+    .arrow.left {
+      left: 10px;
+    }
+
+    .arrow.right {
+      right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">SHOES</div>
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="#">Shop</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="icons">
+      <a href="#"><i class="fas fa-search"></i></a>
+      <a href="#"><i class="fas fa-shopping-cart"></i></a>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section class="about-section">
+    <h1>About Me</h1>
+    <p>Hello! I'm someone who’s passionate about technology, learning, and building things that matter.</p>
+    <p>I’m currently studying computer science and working on personal projects. I enjoy exploring new technologies, solving problems, and pushing myself to improve my skills every day.</p>
+    <p>Some of my interests include cybersecurity, system programming, and open-source development.</p>
+    <p>In the future, I hope to contribute to impactful projects, work with great teams, and keep growing as a developer.</p>
+    <p>Thanks for visiting!</p>
+  </section>
+  <!-- Testimonial Section -->
+  <section class="testimonial-section">
+    <h2>Testimonials</h2>
+    <div class="testimonial-wrapper">
+      <div class="testimonial-container">
+        <div class="testimonial">
+          <div class="testimonial-text">
+            <span class="stars">★★★★★</span>
+            <h3>John Doe</h3>
+            <p>This is the best shoe store I've ever visited! The quality is amazing and the service is top-notch.</p>
+            <span class="author">- John Doe</span>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-text">
+            <span class="stars">★★★★★</span>
+            <h3>Jane Smith</h3>
+            <p>I love my new shoes! They are comfortable and stylish. Highly recommend this store!</p>
+            <span class="author">- Jane Smith</span>
+          </div>
+        </div>
+      </div>
+      <div class="arrow left
+        i class="fas fa-chevron-left"></i>
+      "></div>
+      <div class="arrow right">
+        <i class="fas fa-chevron-right"></i>
+      </div>
+    </div> 
+  </section>
+</body>

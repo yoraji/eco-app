@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shoes Store</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-dDf5TYkEaBvceX9jA9l2Vv6Nu5xPnG9RtZmGmJZfnp9bU5uUHdTQpJz8v7fzsl0KwDyxqJXoGIPXVb9XoWc6bA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+<title>Testimonials Slider</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .testimonial-section {
+      text-align: center;
+      margin: 60px 0 20px;
+    }
+
+    .testimonial-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 1000px;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    .testimonial-container {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .testimonial {
+      background: #111 !important; /* Light grey background */
+      color: #fcfafa !important;         /* Black text */
+      border-radius: 12px;
+      display: flex;
+      min-width: 100%;
+      box-sizing: border-box;
+      padding: 20px;
+      align-items: center;
+      justify-content: center;
+    }
+    .testimonial-text {
+      color: #fff !important;         /* Black text */
+      max-width: 500px;
+    }
+    .stars {
+      color: #ffc107;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .author {
+      color: #333;
+      font-weight: bold;
+      margin-top: 10px;
+      display: block;
+    }
+
+    .testimonial-text .stars {
+      font-size: 20px;
+      color: #ffc107;
+      margin-bottom: 10px;
+    }
+
+    .testimonial-text h3 {
+      font-size: 20px;
+      margin: 0 0 10px;
+    }
+
+    .testimonial-text p {
+      margin-bottom: 10px;
+    }
+
+    .testimonial-text .author {
+      font-weight: bold;
+      color: #555;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 30px;
+      background: #fff;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      z-index: 1;
+      user-select: none;
+    }
+
+    .arrow.left {
+      left: 10px;
+    }
+
+    .arrow.right {
+      right: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">SHOES</div>
+    <nav class="menu">
+      <a href="#">Home</a>
+      <a href="#">Shop</a>
+      <a href="./about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="log-in.html">Contact</a>
+
+    </nav>
+    <div class="icons">
+      <a href="#"><i class="fas fa-search"></i></a>
+      <a href="#"><i class="fas fa-shopping-cart"></i></a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="hero">
+    <div class="hero-text">
+      <h4>NEW ARRIVALS</h4>
+      <h1>STEP UP<br>YOUR STYLE</h1>
+      <div class="buttons">
+        <a href="#" class="btn">SHOP MEN</a>
+        <a href="#" class="btn">SHOP WOMEN</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="./shoes/Air_force_white2.png" alt="White Sneaker" />
+    </div>
+  </main>
+
+  <!-- Product Grid -->
+  <section class="product-grid">
+    <div class="card">
+      <span class="label">RESTOCKED</span>
+      <a href="./product/product1.html">
+        <img src="./shoes/product1.png" alt="Alter TRICKSTER" />
+      </a>
+      <div class="name">Alter TRICKSTER</div>
+      <div class="price">450 MAD</div>
+      <button class="add-button"><i class="fas fa-plus"></i></button>
+    </div>
+
+    <div class="card">
+      <span class="label">RESTOCKED</span>
+      <a href="./product/product2.html">
+        <img src="./shoes/product9.png" alt="Alter TRICKSTER" />
+      </a>
+      <div class="name">Alter TRICKSTER</div>
+      <div class="price">450 MAD</div>
+      <button class="add-button"><i class="fas fa-plus"></i></button>
+    </div>
+
+    <div class="card">
+      <span class="label">RESTOCKED</span>
+      <a href="./product/product3.html">
+        <img src="./shoes/product8.png" alt="Alter MAVERICK" />
+      </a>
+      <div class="name">Alter MAVERICK</div>
+      <div class="price">751 MAD</div>
+      <button class="add-button"><i class="fas fa-plus"></i></button>
+    </div>
+
+    <div class="card">
+      <span class="label new">NEW LAUNCH</span>
+      <a href="./product/product4.html">
+        <img src="./shoes/product7.png" alt="Aeon v2 ECLIPSE" />
+      </a>
+      <div class="name">Aeon v2 ECLIPSE</div>
+      <div class="price">500 MAD</div>
+      <button class="add-button"><i class="fas fa-plus"></i></button>
+    </div>
+  </section>
+
+  <!-- Brand Logos -->
+  <section class="brand-logos">
+    <img src="./shoes/brands_logo/nike.png" alt="Nike">
+    <img src="./shoes/brands_logo/adidas.png" alt="Adidas">
+    <img src="./shoes/brands_logo/puma1.png" alt="Puma">
+    <img src="./shoes/brands_logo/new_balance.png" alt="New Balance">
+    <img src="./shoes/brands_logo/reebok.png" alt="Reebok">
+    <img src="./shoes/brands_logo/gucci.png" alt="Gucci">
+    <img src="./shoes/brands_logo/jordan.png" alt="Jordan">
+  </section>
+
+  <!-- Info Cards -->
+  <section class="info-cards">
+      <div class="info-card">
+        <i class="fas fa-shipping-fast"></i>
+        <h4>Free shipping</h4>
+        <p>Free shipping for all orders.</p>
+      </div>
+      <div class="info-card">
+        <i class="fas fa-hand-holding-usd"></i>
+        <h4>Cash on delivery</h4>
+        <p>Cash on delivery at Zero Cost.</p>
+      </div>
+      <div class="info-card">
+        <i class="fas fa-undo-alt"></i>
+        <h4>Easy return</h4>
+        <p>Free 7 day Return and Exchange.</p>
+      </div>
+    </section>
+    <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+          <div class="testimonial">
+        <img src="./shoes/testimonial01.png" alt="Second testimonial" class="testimonial-img" />
+        <div class="testimonial-text">
+          <div class="stars">★★★★★</div>
+          <h3>“COMFORTABLE AND STYLISH!”</h3>
+          <p>
+            These shoes exceeded my expectations. Super comfy and look great with everything.
+            Will buy again!
+          </p>
+          <span class="author">SARA K.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="arrow left" onclick="slideTestimonials(-1)">&#10094;</div>
+    <div class="arrow right" onclick="slideTestimonials(1)">&#10095;</div>
+  </div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-column">
+      <h3><i class="fas fa-envelope"></i> GET IN TOUCH</h3>
+      <p><i class="fab fa-whatsapp"></i> Whatsapp: <a href="tel:+212601291143">+121 601291143</a></p>
+      <p><i class="fas fa-headset"></i> Support: <a href="mailto:rajiy8299@gmail.com">rajiy8299@gmail.com</a></p>
+      <p><i class="fas fa-handshake"></i> Marketing & Partnership: <a href="mailto:partnerships@wearcomet.com">partnerships@wearcomet.com</a></p>
+      <p><i class="fas fa-briefcase"></i> Careers: <a href="#">Apply Here</a></p>
+    </div>
+
+    <div class="footer-column">
+      <h3><i class="fas fa-map-marker-alt"></i> REACH US</h3>
+      <p>58, 60 Feet Rd, KHB Colony, 6th Block, Koramangala,<br />Bengaluru, Karnataka 560095</p>
+    </div>
+
+    <div class="footer-column">
+      <h3><i class="fas fa-link"></i> SOCIAL</h3>
+      <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+      <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    </div>
+
+    <div class="footer-column">
+      <h3><i class="fas fa-info-circle"></i> ABOUT US</h3>
+      <a href="#">ABOUT US</a>
+      <a href="#">CRAFTSMANSHIP</a>
+      <a href="#">VAULT</a>
+      <a href="#">GARAGE</a>
+    </div>
+
+    <div class="footer-column">
+      <h3><i class="fas fa-ban"></i> QUICK LINKS</h3>
+      <a href="#">HOME</a>
+      <a href="#">STORE LOCATOR</a>
+      <a href="#">MY ACCOUNT</a>
+      <a href="#">RETURN AND EXCHANGE PORTAL</a>
+      <a href="#">CONTACT US</a>
+      <a href="#">CARE</a>
+      <a href="#">FAQ</a>
+      <a href="#">T&C</a>
+      <a href="#">RETURN & EXCHANGES POLICY</a>
+      <a href="#">PRIVACY POLICY</a>
+      <a href="#">RETURN AND EXCHANGE</a>
+    </div>
+  </footer>
+  <script>
+    const container = document.getElementById('testimonialSlider');
+    const testimonials = document.querySelectorAll('.testimonial');
+    let index = 0;
+
+    function slideTestimonials(direction) {
+      index = (index + direction + testimonials.length) % testimonials.length;
+      container.style.transform = `translateX(-${index * 100}%)`;
+    }
+  </script>
+</body>
+</html>

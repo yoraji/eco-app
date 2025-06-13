@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shoes Store | About & Register</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    header.navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #111;
+    }
+
+    .navbar .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .navbar .menu a,
+    .navbar .icons a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .navbar .menu {
+      display: flex;
+      gap: 15px;
+    }
+
+    .navbar .icons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .content, .testimonial-section, .registration-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #111;
+      border-radius: 10px;
+    }
+
+    .testimonial-section h2, .registration-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .testimonial {
+      background: #222;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    .testimonial .stars {
+      color: #ffc107;
+    }
+
+    .registration-form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .registration-form label {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    .registration-form input {
+      padding: 10px;
+      margin-top: 5px;
+      background-color: #222;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+    }
+
+    .registration-form button {
+      margin-top: 20px;
+      padding: 12px;
+      background-color: #b8911c;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .registration-form button:hover {
+      background-color: #c99700;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">SHOES</div>
+    <nav class="menu">
+      <a href="#">Home</a>
+      <a href="#">Shop</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+    <div class="icons">
+      <a href="#"><i class="fas fa-search"></i></a>
+      <a href="#"><i class="fas fa-shopping-cart"></i></a>
+    </div>
+  </header>
+<!-- 
+  <section class="testimonial-section">
+    <h2>What People Say</h2>
+    <div class="testimonial">
+      <div class="stars">
+        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+      </div>
+      <p>"Amazing service and quality! The shoes are top-notch and customer service was excellent."</p>
+      <strong>– Alex J.</strong>
+    </div>
+  </section> -->
+
+  <section class="registration-container">
+    <h2>Create an Account</h2>
+    <form id="registerForm" class="registration-form">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required />
+
+      <button type="submit">Register</button>
+    </form>
+  </section>
+
+  <script>
+    document.getElementById('registerForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const data = {
+        username: e.target.username.value,
+        email: e.target.email.value,
+        password: e.target.password.value
+      };
+
+      try {
+        const response = await fetch('https://5tahinsn76.execute-api.us-east-1.amazonaws.com/dev/RegisterUser', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+        alert(result.message || 'Registration successful!');
+      } catch (err) {
+        alert('Error registering: ' + err.message);
+      }
+    });
+  </script>
+
+</body>
+</html>
+
+<!--
+     1. Create a DynamoDB Table
+     2. Create a Lambda Function
+     3. Set up API Gateway
+     4. Deploy and Test   
+     5. Update HTML JavaScript Endpoint 
+    https://5tahinsn76.execute-api.us-east-1.amazonaws.com/dev/register
+     -->
